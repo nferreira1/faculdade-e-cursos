@@ -1,32 +1,27 @@
-const nameOfCharacter01 = prompt("Enter the name of attacker: ");
-const powerOfAttack = parseFloat(prompt("Enter the power of " + nameOfCharacter01 + ": "));
+const nomePersonagem01 = prompt('Digite o nome do personagem que irá atacar: ')
+const poderAtaquePersonagem01 = parseFloat(prompt('Digite o poder de ataque do ' + nomePersonagem01))
 
-const nameOfCharacter02 = prompt("Enter the name of defender: ");
-let pointsOfLife = parseFloat(prompt("Enter the points of life of " + nameOfCharacter02 + ":"));
-const powerOfDefense = parseFloat(prompt("Enter the power of defense of " + nameOfCharacter02 + ":"));
-const checkChild = prompt("Does " + nameOfCharacter02 + " have a shield? [y/n]");
+const nomePersonagem02 = prompt('Digite o nome do personagem que irá defender: ')
+let pontosVidaPersonagem02 = parseFloat(prompt('Digite os pontos de vida do ' + nomePersonagem02))
+const poderDefesaPersonagem02 = parseFloat(prompt('Digite o poder de defesa do ' + nomePersonagem02))
+const escudo = prompt('O ' + nomePersonagem02 + ' possuí escudo? (S/N)')
 
-let damageOnCharacter02 = 0;
+let dano = 0
 
-if ((powerOfAttack > powerOfDefense) && (checkChild === "n")) {
-	damageOnCharacter02 = powerOfAttack - powerOfDefense;
-} else if ((powerOfAttack > powerOfDefense) && (checkChild === "y")) {
-	damageOnCharacter02 = (powerOfAttack - powerOfDefense) / 2;
+if ((poderAtaquePersonagem01 > poderDefesaPersonagem02) && (escudo === 'N')) {
+	dano = poderAtaquePersonagem01 - poderDefesaPersonagem02
+} else if ((poderAtaquePersonagem01 > poderDefesaPersonagem02) && (escudo === 'S')) {
+	dano = (poderAtaquePersonagem01 - poderDefesaPersonagem02) / 2
 }
 
-pointsOfLife -= damageOnCharacter02;
+pontosVidaPersonagem02 -= dano
 
-alert(
-	"\nAmount of damage that character " + nameOfCharacter01 + " dealt to character " + nameOfCharacter02 + " is " + damageOnCharacter02
-);
+alert(nomePersonagem01 + ' causou ' + dano + ' pontos de dano em ' + nomePersonagem02);
 
-alert(
-	"Character " + nameOfCharacter01 +
-	"\nPower of Attack: " + powerOfAttack +
-	"\n" +
+alert('Nome do personagem atacante: ' + nomePersonagem01 +
+	'\nPoder de ataque: ' + poderAtaquePersonagem01 +
 
-	"\nCharacter " + nameOfCharacter02 +
-	"\nPoints of life: " + pointsOfLife +
-	"\nPoints of defense: " + powerOfDefense +
-	"\nHave child: " + checkChild
-);
+	'\nNome do personagem defensor ' + nomePersonagem02 +
+	'\nPoder de defesa: ' + poderDefesaPersonagem02 +
+	'\nPontos de vida do ' + nomePersonagem02 + ' após o ataque: ' + pontosVidaPersonagem02 +
+	'\nO ' + nomePersonagem02 + ' possui escudo? ' + escudo)
