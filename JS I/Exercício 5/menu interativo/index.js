@@ -1,19 +1,33 @@
-let options;
+let opcoes
 
 do {
-	options = prompt(
-		"Choose an option: " +
-		"\n1 - transfers" +
-		"\n2 - Pix" +
-		"\n3 - Savings account" +
-		"\n4 - Investment" +
-		"\n5 - Exit"
-	);
-	alert("You selected the option " + options)
-	if (options === "5") {
-		alert("You chose to exit, the system is shutting down! Good Bye!");
-		break
-	} else if (options > 5 || options < 1) {
-		alert("The option you chose is invalid!");
+	opcoes = prompt(
+		'BANCO ITAÚ\n' +
+		'1 - PIX' +
+		'\n2 - Tranferência Bancária' +
+		'\n3 - Empréstimos' +
+		'\n4 - Depósito' +
+		'\n5 - Sair'
+	)
+
+	if (opcoes > 5 || opcoes < 1) {
+		alert(
+			'BANCO ITAÚ' +
+			'\nVocê escolheu uma opção inválida, digite novamente!'
+		)
+	} else if (opcoes >= 1 || opcoes <= 5) {
+
+		alert(
+			'BANCO ITAÚ' +
+			'\nSua opção selecionada foi ' + opcoes
+		)
 	}
-} while (options !== "5");
+
+	if (opcoes === '5') {
+		alert(
+			'BANCO ITAÚ' +
+			'\nVocê escolheu sair, até logo 👋🏼'
+		)
+		break
+	}
+} while (opcoes !== '5')

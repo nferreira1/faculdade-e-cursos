@@ -1,18 +1,31 @@
-let options;
-let balance = parseFloat(prompt("How much money is available?"));
+let opcoes
+let dinheiro = parseFloat(prompt('Qual a quantia de dinheiro disponível? '))
 
 do {
-	options = prompt("The amount available is: US$ " + balance +
-		"\nType 1 if you want to deposit some amount of money." +
-		"\nType 2 if you want to withdraw some amount and money." +
-		"\nType 3 if you want to terminate.");
-	if (options === "1") {
-		options = parseFloat(prompt("How much money do you want to deposit?"));
-		balance += options;
-	} else if (options === "2") {
-		options = parseFloat(prompt("What amount do you want to withdraw?"));
-		balance -= options;
-	} else if (options > 3 || options < 1) {
-		alert("The option you chose is invalid!");
+	opcoes = prompt(
+		'BANCO ITAÚ' +
+		'\nSaldo: ' + dinheiro +
+		'\n1 - Depositar dinheiro' +
+		'\n2 - Sacar dinheiro' +
+		'\n3 - Sair'
+	)
+
+	if (opcoes === '1') {
+		dinheiro += parseFloat(prompt('BANCO ITAÚ' +
+			'\nDigite a quantia de dinheiro que deseja depositar: '
+		))
+	} else if (opcoes === '2') {
+		dinheiro -= parseFloat(prompt('BANCO ITAÚ' +
+			'\nDigite a quantia de dinheiro que deseja sacar: '
+		))
+	} else if (opcoes === '3') {
+		alert('BANCO ITAÚ' +
+			'\nVocê escolheu sair! Até logo 👋🏼'
+		)
+	} else {
+		alert('BANCO ITAÚ' +
+			'\nVocê digitou uma opção inválida, digite novamente!'
+		)
 	}
-} while (options !== "3");
+
+} while (opcoes !== '3')

@@ -1,5 +1,6 @@
-const number = parseFloat(prompt("Enter a number you want to know the table up to 20:"));
-
+const numero = parseFloat(prompt('Digite um número para saber a tabuada até o 20: '))
 for (let i = 1; i <= 20; i++) {
-	console.log(number + " x " + i + " = " + number * i);
+	console.log(
+		numero + ' x ' + i + ' = ' + numero * i
+	)
 }
