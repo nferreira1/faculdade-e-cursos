@@ -5,7 +5,7 @@ public class Main {
 		Scanner entrada = new Scanner(System.in);
 
 		System.out.print("Digite um número: ");
-		double numero = entrada.nextInt();
+		double numero = entrada.nextDouble();
 
 		double fatorial = 1;
 
@@ -13,7 +13,7 @@ public class Main {
 			fatorial *= i;
 		}
 
-		System.out.printf("O fatorial de %.2f", fatorial);
+		System.out.printf("O fatorial de %.2f é %.2f",numero, fatorial);
 
 		entrada.close();
 	}

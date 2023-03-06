@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Aula17/Aula17.iml" filepath="$PROJECT_DIR$/Aula17/Aula17.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula18/Aula18.iml" filepath="$PROJECT_DIR$/Aula18/Aula18.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula19/Aula19.iml" filepath="$PROJECT_DIR$/Aula19/Aula19.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula28/Aula28.iml" filepath="$PROJECT_DIR$/Aula28/Aula28.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula30/Aula30.iml" filepath="$PROJECT_DIR$/Aula30/Aula30.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula34/Aula34.iml" filepath="$PROJECT_DIR$/Aula34/Aula34.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula36/Aula36.iml" filepath="$PROJECT_DIR$/Aula36/Aula36.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula37/Aula37.iml" filepath="$PROJECT_DIR$/Aula37/Aula37.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula41/Aula41.iml" filepath="$PROJECT_DIR$/Aula41/Aula41.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula42/Aula42.iml" filepath="$PROJECT_DIR$/Aula42/Aula42.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TADS0.iml" filepath="$PROJECT_DIR$/.idea/TADS0.iml" />
+    </modules>
+  </component>
+</project>
