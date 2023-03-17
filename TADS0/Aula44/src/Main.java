@@ -14,10 +14,22 @@ public class Main {
 			vetor[i] = scanner.nextInt();
 		}
 
-		System.out.print("Valores digitados:");
-		for (int i = 0; i < vetor.length; i++) {
-			System.out.printf("%d, ", vetor[i]);
+		System.out.print("Valores digitados: ");
+		for (int i : vetor) {
+			System.out.printf("%d, ", i);
 		}
+
+
+//		int[] vetor = new int[3];
+//		vetor[0] = 10;
+//		vetor[1] = 20;
+//		vetor[2] = 30;
+//
+////		forEach
+//		for (int i : vetor) {
+//			System.out.println(i);
+//		}
+
 
 		scanner.close();
 	}
