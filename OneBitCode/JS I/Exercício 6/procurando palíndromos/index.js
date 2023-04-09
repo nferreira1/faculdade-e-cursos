@@ -1,5 +1,14 @@
-let message = prompt("Type a word you want to know if it is a palindrome or not: ");
+let palavra = prompt('Digite uma palavra: ')
+let palavraInvertida = ''
 
-for (let i = 0; i < message.length; i++) {
-	console.log(message[i]);
+for (let i = palavra.length - 1; i >= 0; i--) {
+	palavraInvertida += palavra[i]
+}
+
+if (palavraInvertida === palavra) {
+	alert('A palavra ' + palavra + ' é um palíndromo!\n')
+	alert(palavra + ' === ' + palavraInvertida)
+} else {
+	alert('A palavra ' + palavra + ' não é um palíndromo!\n')
+	alert(palavra + ' !== ' + palavraInvertida)
 }

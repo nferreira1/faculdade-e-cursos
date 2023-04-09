@@ -1,11 +1,10 @@
 let pessoa = {
-	nome: "Nathan",
-	idade: 21,
+	nome: 'Nathan',
+	idade: 22,
 	dizerOla() {
-		console.log("Olá, mundo! Meu nome é " + this.nome); // this aponta para o próprio objeto
+		console.log('Olá, mundo! Meu nome é ' + this.nome + '!')
 	}
 }
 
-console.log(pessoa);
-
-pessoa.dizerOla()
+console.log(pessoa)
+console.log(pessoa.dizerOla())

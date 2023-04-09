@@ -1,58 +1,75 @@
-const properties = [];
-let options;
+const imoveis = []
+let opcao
 
 do {
-	options = prompt(
-		"Welcome to Property Registry!\n" +
-		"Registered properties: " + properties.length +
-		"\n\nChoose an option below:" +
-		"\n1 - Register property" +
-		"\n2 - Show all saved properties" +
-		"\n3 - Exit"
-	);
+	opcao = prompt(
+		'Cadastro de imóveis\n' +
+		'Quantidade de imóveis cadastrados: ' + imoveis.length + '\n' +
+		'1 - Cadastrar imóvel\n' +
+		'2 - Ver imóveis cadastrados\n' +
+		'3 - Sair'
+	)
 
-	switch (options) {
-		case "1":
-			const propertie = {};
-			propertie.ownerName = prompt("Enter the name of the property owner: ");
-			propertie.rooms = prompt("Enter the number of rooms in the property: ");
-			propertie.bathrooms = prompt("Enter the number of bathrooms in the property: ");
+	switch (opcao) {
+		case '1':
+			const imovel = {}
+			imovel.nomeProprietario = prompt('Digite o nome do proprietário: ')
+			imovel.quantQuartos = parseFloat(prompt('Digite a quantidade de quartos: '))
+			imovel.quantBanheiros = parseFloat(prompt('Digite a quantidade de banheiros: '))
+			imovel.garagem = prompt('Possui garagem? (s/n)')
 
 			do {
-				propertie.garage = prompt("Is there a garage on the property? (yes/no)");
-				if (propertie.garage !== "yes" && propertie.garage !== "no") {
-					alert("You entered an invalid option, please try again!");
+				switch (imovel.garagem) {
+					case 's':
+						imovel.quantGaragem = parseFloat(prompt('Digite a quantidade de vagas na garagem: '))
+						break
+					case 'n':
+						imovel.quantGaragem = 0
+						break
+					default:
+						alert('Opção inválida! Digite novamente!')
 				}
-			} while (propertie.garage !== "yes" && propertie.garage !== "no")
+			} while (imovel.garagem !== 's' && imovel.garagem !== 'n')
 
-			// if (propertie.garage === "yes") {
-			// 	propertie.garage = true
-			// } else if (propertie.garage === "no") {
-			// 	propertie.garage = false;
-			// }
+			const confirmacao = confirm(
+				'Deseja salvar esta imovel?\n' +
+				'Nome do proprietário: ' + imovel.nomeProprietario + '\n' +
+				'Quantidade de quartos: ' + imovel.quantQuartos + '\n' +
+				'Quantidade de banheiros: ' + imovel.quantBanheiros + '\n' +
+				'Possui garagem: ' + imovel.garagem + '\n' +
+				'Quantas vagas tem na garagem: ' + imovel.quantGaragem
+			)
 
-			const confirmation = confirm(
-				"Save this property?\n" +
-				"\nOwner: " + propertie.ownerName +
-				"\nRooms: " + propertie.rooms +
-				"\nBathrooms: " + propertie.bathrooms +
-				"\nGarage: " + propertie.garage
-			);
-
-			if (confirmation === true) {
-				properties.push(propertie);
+			if (confirmacao == true) {
+				imoveis.push(imovel)
+				alert('Imóvel cadastrado com sucesso!')
+			} else {
+				alert('Retornando ao menu!')
 			}
 
-			console.log(propertie);
+			console.log(imovel)
 			break
-		case "2":
-			a
+		case '2':
+			if (imoveis.length === 0) {
+				alert('Não há nenhum imóvel cadastrado!')
+			} else {
+				for (let i = 0; i < imoveis.length; i++) {
+					alert(
+						'Imovel ' + (i + 1) + 'º' + '\n' +
+						'Nome do proprietário: ' + imoveis[i].nomeProprietario + '\n' +
+						'Quantidade de quartos: ' + imoveis[i].quantQuartos + '\n' +
+						'Quantidade de banheiros: ' + imoveis[i].quantBanheiros + '\n' +
+						'Possui garagem: ' + imoveis[i].garagem + '\n' +
+						'Quantas vagas tem na garagem: ' + imoveis[i].quantGaragem
+					)
+				}
+			}
 			break
-		case "3":
-			alert("Shutting down...");
+		case '3':
+			alert('Até logo!')
 			break
 		default:
-			alert("You entered an invalid option, please try again!");
+			alert('Opção inválida! Digite novamente!')
 	}
 
-} while (options !== "3")
+} while (opcao !== '3')
