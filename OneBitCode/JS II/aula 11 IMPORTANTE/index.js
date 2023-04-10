@@ -1,6 +1,8 @@
 function register(ev) {
 	console.log(ev)
 
+	// O ev é o evento que foi disparado, ele é passado sempre quando o evento é disparado, sempre fica disponível
+
 	//currentTarget = pega o elemento que acionou o evento
 	const sectionElement = ev.currentTarget.parentNode
 
