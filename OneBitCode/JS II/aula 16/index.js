@@ -9,6 +9,8 @@ function useDarkTheme() {
 }
 
 function switchTheme() {
+	// Em JavaScript, o método .toggle() é usado para alternar a visibilidade de um elemento HTML, ou seja, mostra o elemento se estiver oculto ou oculta o elemento se ele estiver visível.
+	// Neste caso ele está invertendo as classes
 	document.body.classList.toggle('is-light')
 	document.body.classList.toggle('is-dark')
 }
