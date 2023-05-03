@@ -43,7 +43,7 @@ console.log(orcs)
 
 
 
-// Serve para transformar um array em um outra coisa (pode ser objeto, número, string, etc)
+// Serve para transformar um array em uma outra coisa (pode ser objeto, número, string, etc)
 // Reduce
 
 const nivelTotal = personagens.reduce(function (valorAcumulado, personagem) {
