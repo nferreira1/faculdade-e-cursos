@@ -52,7 +52,7 @@ console.log(sociedade)
 
 // Substitui um ou mais elementos do array por outros elementos
 // splice
-const elementosRemovidos = sociedade.splice(4, 1, 'Gandalf, O Cinzento')
+const elementosRemovidos = sociedade.splice(4, 2, 'Gandalf, O Cinzento')
 console.log(elementosRemovidos)
 console.log(sociedade)
 
