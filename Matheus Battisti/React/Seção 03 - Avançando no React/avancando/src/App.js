@@ -9,6 +9,9 @@ import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
 import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
+import Message from './components/Message';
+import ChangeMessageState from './components/ChangeMessageState';
+import UserDetails from './components/UserDetails';
 
 function App() {
 
@@ -24,6 +27,18 @@ function App() {
 	function showMessage() {
 		console.log('Evento do componente pai!')
 	}
+
+	const [message, setMessage] = useState()
+
+	const handleMessage = (msg) => {
+		setMessage(msg)
+	}
+
+	const users = [
+		{ id: 1, name: 'Nathan', age: 17, job: 'Front-End Programmer' },
+		{ id: 2, name: 'João', age: 16, job: 'Back-End Programmer' },
+		{ id: 3, name: 'Geraldo', age: 39, job: 'DBA' }
+	]
 
 	return (
 		<div className="App">
@@ -57,17 +72,26 @@ function App() {
 			<CarDetails brand='fiat' color='branco' km={0} newCar={true} />
 
 			{/* loop em array de obejtos */}
-			{cars.map((car, i) => (
-				<CarDetails key={i} brand={car.brand} color={car.color} km={car.km} newCar={car.newCar} />
+			{cars.map((car) => (
+				<CarDetails key={car.id} brand={car.brand} color={car.color} km={car.km} newCar={car.newCar} />
 			))}
 
-			{/* cildren */}
+			{/* children */}
 			<Container myValue='testing'>
 				<p>E este é o conteúdo</p>
 			</Container>
 
 			{/* executar função */}
 			<ExecuteFunction myFunction={showMessage} />
+
+			{/* state lift */}
+			<Message msg={message} />
+			<ChangeMessageState handleMessage={handleMessage} />
+
+			{/* desafio 04 */}
+			{users.map((user) => (
+				<UserDetails key={user.id} name={user.name} age={user.age} job={user.job} />
+			))}
 		</div>
 	)
 }
