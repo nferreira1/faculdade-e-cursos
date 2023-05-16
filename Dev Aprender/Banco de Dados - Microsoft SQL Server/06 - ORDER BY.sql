@@ -4,6 +4,8 @@ ORDER BY
 SERVE PARA ORDERNAR OS RESULTADOS EM ORDEM CRESCENTE OU DECRESCENTE
 
 SELECT <nome da coluna> FROM <nome da tabela> ORDER BY <nome da coluna> ASC ou DESC
+
+CASO DEPOIS DO NOME DA COLUNA QUE DESEJA ORDENAR, PODE-SER DEIXAR EM BRANCO, QUE POR PADRÃO É USADO O ASC
 */
 
 SELECT * FROM Person.Person ORDER BY FirstName ASC 
@@ -15,4 +17,11 @@ SELECT FirstName, LastName FROM Person.Person ORDER BY FirstName ASC, LastName D
 SELECT FirstName, LastName FROM Person.Person ORDER BY MiddleName ASC
 
 -- Desafio 1
-SELECT * FROM Production.Product
+SELECT TOP 10 ProductID FROM Production.Product ORDER BY ListPrice DESC	
+
+-- Desafio 2
+SELECT Name, ProductNumber FROM Production.Product WHERE ProductID >= 1 AND ProductID <= 4
+
+-- Ou
+
+SELECT TOP 4 Name, ProductNumber FROM Production.Product ORDER BY ProductID ASC
