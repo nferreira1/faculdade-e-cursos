@@ -1,0 +1,57 @@
+.game {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* text-transform: uppercase; */
+	flex-grow: 1;
+}
+
+.game * {
+	font-size: 15px;
+}
+
+.game .points span {
+	display: flex;
+	font-size: 15px;
+}
+
+.game h1 {
+	font-size: 2.5em;
+}
+
+.game h3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+/*
+.game h1 {
+	font-size: 2.5em;
+}
+
+.points span {
+	font-weight: bold;
+}
+
+.wordContainer {
+	margin: 1.5em;
+	padding: 1.5em;
+	border: 20px solid #ecfa00;
+	display: flex;
+}
+
+.letter,
+.blankSquare {
+	font-size: 70px;
+	line-height: 1.5;
+	border: 3px solid #000;
+	height: 100px;
+	width: 100px;
+	text-transform: uppercase;
+	background-color: #fff;
+	color: #000;
+	font-weight: bold;
+} */
