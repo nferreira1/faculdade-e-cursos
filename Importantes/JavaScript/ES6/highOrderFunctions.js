@@ -95,6 +95,8 @@ console.log(someoneWithNewsletter)
 
 // false
 
+
+
 data[0].newsletter = true
 someoneWithNewsletter = data.some(user => user.newsletter)
 console.log(someoneWithNewsletter)
@@ -106,3 +108,5 @@ console.log(someoneWithNewsletter)
 // 10 - Every
 const everyUserHasName = data.every(user => user.name)
 console.log(everyUserHasName)
+
+// true
