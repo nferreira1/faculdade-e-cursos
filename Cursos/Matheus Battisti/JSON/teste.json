@@ -1,0 +1,16 @@
+[
+	{
+		"nome": "Nathan",
+		"idade": 22,
+		"esta_trabalhando": true,
+		"detalhes_profissao": {
+			"profissao": "Estágiário",
+			"empresa": "Círculo Militar de São Paulo"
+		},
+		"hobbies": [
+			"programar",
+			"jogar tênis",
+			"ler"
+		]
+	}
+]
