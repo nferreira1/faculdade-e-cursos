@@ -1,5 +1,5 @@
 {
-	"Projetos": {
+	"projects": {
 		"secretword": {
 			"root": "secretword",
 			"routes": [
