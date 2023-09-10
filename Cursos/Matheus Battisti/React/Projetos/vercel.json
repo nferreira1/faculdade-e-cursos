@@ -1,0 +1,13 @@
+{
+	"projects": {
+		"secretword": {
+			"root": "secretword",
+			"routes": [
+				{
+					"src": "/secretword(/.*)?",
+					"dest": "/secretword$1"
+				}
+			]
+		}
+	}
+}
