@@ -1,0 +1,16 @@
+.gameOver {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.gameOver h2 {
+	font-size: 1.5em;
+}
+
+.gameOver h2 span {
+	color: #ECFA00;
+	font-size: 1.2em;
+}
