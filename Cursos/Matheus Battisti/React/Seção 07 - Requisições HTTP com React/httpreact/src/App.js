@@ -12,7 +12,7 @@ function App() {
 	// const [produtos, setProdutos] = useState([])
 
 	// 4 - Hook customizado
-	const { dados: itens, httpConfig } = useFetch(url)
+	const { dados: itens, httpConfig, loading, error } = useFetch(url)
 
 	const [nome, setNome] = useState("")
 	const [preco, setPreco] = useState("")
@@ -60,31 +60,49 @@ function App() {
 		setPreco("")
 	}
 
+	// 9 - Desafio
+	const handleRemove = (id) => {
+		httpConfig(id, 'DELETE')
+	}
+
 	return (
 		<div className="App">
 			<h1>Lista de produtos</h1>
-			<ul>
-				{itens?.map(produto => (
-					<li key={produto.id}>{produto.name} - {produto.price}</li>
-				))}
-				<div className="add-product">
-					<form onSubmit={handleSubmit}>
+			{/* 6 - Loading */}
+			{loading && <p>Carregando dados...</p>}
+			{error && <p>{error}</p>}
 
-						<label>
-							Nome
-							<input type="text" value={nome} name='nome' onChange={e => setNome(e.target.value)} />
-						</label>
+			{!loading && (
+				<ul>
+					{itens && itens.map(produto => (
+						<li key={produto.id}>
+							{produto.name} - R$ {produto.price}
+							<button onClick={() => handleRemove(produto.id)}>Excluir</button>
+						</li>
+					))}
+				</ul>
+			)}
 
-						<label>
-							Preço
-							<input type="text" value={preco} name='preco' onChange={e => setPreco(e.target.value)} />
-						</label>
+			<div className="add-product">
+				<form onSubmit={handleSubmit}>
 
-						<input type="submit" value='Criar Produto' />
+					<label>
+						Nome
+						<input type="text" value={nome} name='nome' onChange={e => setNome(e.target.value)} />
+					</label>
 
-					</form>
-				</div>
-			</ul>
+					<label>
+						Preço
+						<input type="text" value={preco} name='preco' onChange={e => setPreco(e.target.value)} />
+					</label>
+
+					{/* 7 - state de loading no post */}
+					{loading && <input type="submit" disabled value='Aguarde' />}
+					{!loading && <input type="submit" value='Criar Produto' />}
+
+				</form>
+			</div>
+
 		</div>
 	);
 }
