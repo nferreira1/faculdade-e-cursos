@@ -1,17 +1,25 @@
+// 2 - Links com react router
+
 import "./Navbar.css"
 
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 const Navbar = () => {
 	return (
 		<nav>
 			{/* Esse faz o redirecionamento da página trocando componente */}
-			<Link to="/">Home</Link>
-			<Link to="/about">Sobre</Link>
+			{/* <Link to="/">Home</Link>
+			<Link to="/about">Sobre</Link> */}
 
 			{/* Esse faz recarregando a página */}
 			{/* <a href="/">Home</a> */}
-		</nav>
+
+			{/* 3 - NavLink */}
+			<NavLink to='/'
+			// className={({ isActive }) => (isActive ? 'esta-ativo' : 'nao-ativo')}
+			>Home</NavLink>
+			<NavLink to='/about'>Sobre</NavLink>
+		</nav >
 	)
 }
 
