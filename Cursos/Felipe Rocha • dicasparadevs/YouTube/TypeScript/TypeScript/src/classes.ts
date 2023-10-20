@@ -45,3 +45,13 @@ class Employee extends Person {
 		return 'Employee: ' + this.name
 	}
 }
+
+// A mesma coisa que acima
+class PersonRefact {
+	constructor(
+		readonly id: number,
+		protected name: string,
+		private age: number
+	) { }
+}
+
