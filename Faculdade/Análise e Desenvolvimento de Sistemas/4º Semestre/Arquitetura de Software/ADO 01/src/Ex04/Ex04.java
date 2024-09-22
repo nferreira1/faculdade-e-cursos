@@ -1,6 +1,6 @@
 package Ex04;
 
-public class Main {
+public class Ex04 {
 	public static void main(String[] args) {
 		ProdutoLeaf p1 = new ProdutoLeaf("Celular", 1500.00);
 		ProdutoLeaf p2 = new ProdutoLeaf("Computador", 3500.00);

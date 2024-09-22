@@ -1,9 +1,22 @@
-package Ex01;
+package Ex02;
 
-public class Main {
-	public static void main(String[] args) {
+public class Ex02 extends  Thread {
 
-		EstoqueProdutos estoque = new EstoqueProdutos();
+	public static void main(String[] args)  {
+		Ex02 m1 = new Ex02();
+		Ex02 m2 = new Ex02();
+		Ex02 m3 = new Ex02();
+
+		m1.start();
+		m2.start();
+		m3.start();
+	}
+
+	@Override
+	public void run() {
+		Estoque estoque = Singleton.getInstanciarEstoque();
+
+		System.out.println(estoque.hashCode());
 		estoque.carregarProdutos();
 
 		Produto produto1 = new Produto(1, 23.0, "Limpeza");

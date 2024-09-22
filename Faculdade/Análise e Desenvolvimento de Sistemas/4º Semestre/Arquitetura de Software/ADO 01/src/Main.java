@@ -1,3 +1,8 @@
+import Ex01.Ex01;
+import Ex02.Ex02;
+import Ex03.Cliente;
+import Ex04.Ex04;
+
 import java.util.Scanner;
 
 public class Main {
@@ -10,7 +15,7 @@ public class Main {
 			System.out.println("1 - Exercício 01");
 			System.out.println("2 - Exercício 02");
 			System.out.println("3 - Exercício 03");
-			System.out.println("4 - Exercício 04");
+			System.out.println("3 - Exercício 04");
 			System.out.println("0 - Sair");
 			System.out.print("Sua escolha: ");
 
@@ -18,16 +23,16 @@ public class Main {
 
 			switch (escolha) {
 				case 1:
-					Ex01.Main.main(args);
+					Ex01.main(args);
 					break;
 				case 2:
-					Ex02.Main.main(args);
+					Ex02.main(args);
 					break;
 				case 3:
-					Ex03.Main.main(args);
+					Cliente.main(args);
 					break;
 				case 4:
-					Ex04.Main.main(args);
+					Ex04.main(args);
 					break;
 				case 0:
 					continuar = false;
